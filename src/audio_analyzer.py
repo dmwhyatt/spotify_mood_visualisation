@@ -683,6 +683,9 @@ class AudioAnalyzer:
                                    n_jobs: int = -1) -> Dict[str, Dict[str, float]]:
         """
         Download and analyze multiple tracks from YouTube (parallelized).
+        Optionally filter results by duration to match YouTube to Spotify. I recommend using this,
+        as sometimes YouTube has multiple versions of the same query, this is a 
+        decent way to filter out the wrong ones. I think.
         
         Args:
             tracks: List of dicts with 'name', 'artist', and optionally 'duration_ms' keys

@@ -43,7 +43,9 @@ class MoodVisualizer:
     
     def __init__(self, output_dir: str = "outputs"):
         """
-        Initialize visualizer.
+        Initialize visualizer. This class uses lyric sentiment and and audio features to create visualizations
+        based on each track to construct a mood timeline, valence-arousal space, and color gradient. It also
+        creates a mood video, which is a simple rule-based generative video that is created from the color gradient.
         
         Args:
             output_dir: Directory to save visualizations
@@ -131,8 +133,8 @@ class MoodVisualizer:
         ax.text(0.85, 0.15, 'Calm\nRelaxed', ha='center', va='center',
                 fontsize=12, alpha=0.5, fontweight='bold')
         
-        ax.set_xlabel('Valence (normalized, Negative ← → Positive)', fontsize=12)
-        ax.set_ylabel('Arousal (normalized, Calm ← → Energetic)', fontsize=12)
+        ax.set_xlabel('Valence (normalized, Negative to Positive)', fontsize=12)
+        ax.set_ylabel('Arousal (normalized, Calm to Energetic)', fontsize=12)
         ax.set_title('Valence-Arousal Space (Russell\'s Circumplex Model)', 
                      fontsize=14, fontweight='bold')
         ax.set_xlim(0, 1)
