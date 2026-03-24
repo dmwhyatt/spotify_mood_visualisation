@@ -20,6 +20,8 @@ outputs/
 example_outputs/
 visualizations/
 *.png
+!docs/mood_video_preview.png
+docs/preview_candidates/
 *.jpg
 *.mp4
 *.mp3

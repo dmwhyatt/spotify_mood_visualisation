@@ -1,5 +1,7 @@
 # Spotify Mood Visualization
 
+![Representative frame from the generative mood video](docs/mood_video_preview.png)
+
 A pipeline for analyzing a Spotify playlist and generating visuals based on
 their audio and lyrics.
 
